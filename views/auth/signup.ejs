@@ -1,0 +1,27 @@
+<div class="w-100 flex f-center">
+  <div class="pad-03 w-40">
+    <h2 class="">Sign Up</h2>
+    <form action="/signup" method="POST">
+      <div class="form-field">
+        <label for="usernameInput">Email</label>
+        <input type="email" class="" id="username" placeholder="Email" name="username">
+      </div>
+      <div class="form-field">
+        <label for="passwordInput">Password</label>
+        <input type="password" class="" id="password" placeholder="Password" name="password">
+      </div>
+      <div class="form-field">
+        <label for="confpasswordInput">Confirm Password</label>
+        <input type="password" class="" id="confpassword" placeholder="Password" name="confpassword">
+      </div>
+      <% if ( message != "" ) { %>
+        <div class="alert alert-danger" role="alert"><%= message %></div>
+      <% } %>
+      <div class="flex f-col f-center form-field">
+        <button type="submit" class="btn">Submit</button>
+        <a href="/auth/facebook" class="btn btn-sec">Sign Up With Facebook</a>
+        <a href="/auth/google" class="btn btn-sec">Sign Up With Google</a>
+      </div>
+    </form>  
+  </div>
+</div>

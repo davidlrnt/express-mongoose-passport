@@ -1,0 +1,19 @@
+<nav class="flex f-between f-al-center w100 text-primary-color accent-color pad-03">
+  <h3><a class="w-70" href="/">Awesome App</a></h3>
+  <div class="w-30">
+    <% if (isUserLoggedIn) { %>
+      <div class="flex f-around">
+        <h3><a href="/logout">Logout</a></h3>
+        <h3><a href="/profile">Profile</a></h3>
+      </div>
+      <div>
+        <span>Signed in as <%= currentUser.user.username %></span>
+      </div>
+    <% } else { %>
+      <div class="flex f-around">
+        <h3><a href="/signup">Signup</a></h3>
+        <h3><a href="/login">Login</a></h3>
+      </div>
+    <% } %>
+  </div>
+</nav>
